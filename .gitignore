@@ -1,0 +1,35 @@
+# Node.js
+node_modules/
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependências do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração do editor (se você usa VS Code)
+.vscode/
+
+# Arquivos de configuração do IntelliJ IDEA (se você usa)
+.idea/
+
+# Arquivos de cache do NPM
+.npm/
+
+# Arquivos de cache do Yarn
+.yarn/
+
+# Arquivos gerados por ferramentas de construção
+build/
+coverage/
+
+# Arquivos do TypeScript
+*.d.ts
