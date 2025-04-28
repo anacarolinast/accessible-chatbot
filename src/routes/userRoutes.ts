@@ -7,3 +7,6 @@ const userRoutes = Router();
 userRoutes.post('/users', UserController.create);
 
 export default userRoutes;
+
+// Rota para atualizar um usuário
+userRoutes.put('/users/:id', UserController.update);
