@@ -37,7 +37,7 @@ export class UserController {
     }
   }
 
-  static update(req: Request, res: Response): void { //Update
+  static update(req: Request, res: Response): void { 
     const { id } = req.params;
     const { name, email, password } = req.body;
   
@@ -47,7 +47,6 @@ export class UserController {
       return;
     }
   
-    // Atualiza apenas os campos enviados
     if (name) user.name = name;
     if (email) user.email = email;
     if (password) user.password = password;
