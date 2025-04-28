@@ -3,6 +3,7 @@ import { CreateUserDTO } from '../dtos/createUserDTO';
 import { User } from '../models/User';
 
 export class UserController {
+  
   static async create(req: Request, res: Response): Promise<void> {
     try {
       const data: CreateUserDTO = req.body;
