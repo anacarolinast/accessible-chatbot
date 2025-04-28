@@ -36,4 +36,23 @@ export class UserController {
       res.json(user);
     }
   }
+
+  static update(req: Request, res: Response): void { 
+    const { id } = req.params;
+    const { name, email, password } = req.body;
+  
+    const user = users.find(u => u.id === Number(id));
+    if (!user) {
+      res.status(404).json({ message: 'Usuário não encontrado' });
+      return;
+    }
+  
+    if (name) user.name = name;
+    if (email) user.email = email;
+    if (password) user.password = password;
+  
+    res.json(user);
+  }
+  
+
 }
