@@ -14,6 +14,7 @@
         <img src="chat-bot-animate.svg" alt="ChatBot">
     </div>
     <div class="right-cadastro">
+        <button id="toggle-contraste">Ativar Alto Contraste</button>
         <div class="card-cadastro">
             <h1>CADASTRO</h1>
             <div class="textfield">
@@ -36,5 +37,19 @@
         </div>
     </div>
 </div>
+<script>
+    const botaoContraste = document.getElementById('toggle-contraste');
+
+botaoContraste.addEventListener('click', () => {
+  document.body.classList.toggle('contraste');
+
+  // Muda o texto do botão
+  if (document.body.classList.contains('contraste')) {
+    botaoContraste.textContent = 'Desativar Alto Contraste';
+  } else {
+    botaoContraste.textContent = 'Ativar Alto Contraste';
+  }
+});
+</script>
 </body>
 </html>

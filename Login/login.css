@@ -105,6 +105,33 @@ body {
     cursor: pointer;
     box-shadow: 0px 10px 40px -10px #161833;
 }
+.contraste {
+    background-color: #000000;
+    color: #FFFF00;
+  }
+  
+  .contraste input,
+  .contraste button {
+    background-color: #000000;
+    color: #FFFF00;
+    border: 2px solid #FFFF00;
+  }
+  #toggle-contraste {
+    font-family: "Varela Round", sans-serif;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgb(224, 225, 255);
+    background: #161833;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -10px #161833;
+  }
+
 
 @media (max-width: 768px) {
     .main-login {
