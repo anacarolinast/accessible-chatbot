@@ -47,15 +47,39 @@ const Cadastro = () => {
     }
 
 
-    const handleSubmit = (event: { preventDefault: () => void }) => {
-        event.preventDefault()
+    const handleSubmit = async (event: { preventDefault: () => void }) => {
+  event.preventDefault();
 
-        if (!userNameError && !emailError && !passwordError) {
-          console.log("Cadastro realizado com sucesso: ", {userName, email, password, birthDate})
-        } else {
-          console.log("Preencha os campos solicitados corretamente!")
-        }
+  if (!userNameError && !emailError && !passwordError) {
+    try {
+      const response = await fetch('http://localhost:3000/Cadastro', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nome: userName,
+          email: email,
+          senha: password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.mensagem); 
+        
+      } else {
+        alert(data.mensagem); 
+      }
+    } catch (error) {
+      console.error('Erro ao cadastrar:', error);
+      alert('Erro ao conectar com o servidor.');
     }
+  } else {
+    console.log("Preencha os campos solicitados corretamente!");
+  }
+};
 
     return (
          <form onSubmit={handleSubmit}>
