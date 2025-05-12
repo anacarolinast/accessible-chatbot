@@ -14,7 +14,7 @@ def acessar_dados_protegidos():
     if response.status_code == 200:
         print('Dados protegidos:', response.json())
     else:
-        print('Erro ao acessar dados:', response.status_code)
+        print('Ocorreu um erro ao acessar dados:', response.status_code)
 
 if __name__ == '__main__':
     acessar_dados_protegidos()
