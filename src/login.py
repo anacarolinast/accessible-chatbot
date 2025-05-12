@@ -1,7 +1,7 @@
 import requests
 
 def login(email, senha):
-    url = 'https://api.seuprojeto.com/auth/login'
+    url = ''
     payload = {
         'email': email,
         'senha': senha
