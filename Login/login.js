@@ -13,11 +13,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     .then(data => {
         if (data.token) {
             localStorage.setItem('token', data.token);
-            alert('Login realizado com sucesso!');
-            // Exemplo de redirecionamento
-            // window.location.href = "pagina_principal.html";
+            alert('O login realizado com sucesso!');
         } else {
-            alert('Usuário ou senha incorretos');
+            alert('Usuário ou senha incorretos. Tente novalmente com um pouco mais de calma.');
         }
     })
     .catch(error => console.error('Erro:', error));
