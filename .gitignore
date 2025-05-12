@@ -25,3 +25,5 @@ coverage/
 *.d.ts
 
 .env
+
+token.txt
