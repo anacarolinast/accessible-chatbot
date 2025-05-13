@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -8,32 +7,44 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="top-bar">
-        <img src="AutBot_Logo.png" alt="Logo">
-        <button class="botao-inicio">AutBot</button>
-        <button class="botao-sobre">Sobre</button>
-        <button class="botao-cadastre">Cadastre-se</button>
-    </div>
-    <div class="main-login">
+
+<div class="top-bar">
+    <img src="AutBot_Logo.png" alt="Logo">
+    <button class="botao-inicio">AutBot</button>
+    <button class="botao-sobre">Sobre</button>
+    <button class="botao-cadastre">Cadastre-se</button>
+</div>
+
+<div class="main-login">
     <div class="left-login">
         <h1>Bem-vindo AutBot!<br>Seu apoio acessível sobre TEA</h1>
         <img src="AutBot_Image.png" alt="AutBot">
     </div>
+
     <div class="right-login">
         <div class="card-login">
             <h1>LOGIN</h1>
-            <div class="textfield">
-                <label for="usuario">Usuário</label>
-                <input type="text" name="usuario" placeholder="Usuário">
-            </div>
-            <div class="textfield">
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" placeholder="Senha">
-            </div>
-            <button class="botao-login">Login</button> 
-            <button class="botao-esqueci-senha">Esqueci minha senha</button>  
+
+            <!-- FORMULÁRIO -->
+            <form id="loginForm">
+                <div class="textfield">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="usuario" placeholder="Usuário">
+                </div>
+
+                <div class="textfield">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="senha" placeholder="Senha">
+                </div>
+
+                <button type="submit" class="botao-login">Login</button>
+            </form>
+
+            <button class="botao-esqueceu-senha">Esqueci minha senha</button>
         </div>
     </div>
 </div>
+
+<script src="login.js"></script>
 </body>
 </html>
