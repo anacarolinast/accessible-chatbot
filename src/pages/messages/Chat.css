@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+
+
+.chat-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Varela Round", sans-serif;
+  background-color: #ffffff;
+}
+
+.top-bar {
+  width: 100%;
+  height: 90px;
+  background-color: #b6d9ec;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding-left: 70px;
+}
+
+.top-bar img {
+  width: 3%;
+  margin-left: 0;
+}
+
+.botao-inicio,
+.botao-sobre,
+.botao-perfil {
+  font-size: 15px;
+  color: #181d54;
+  background: transparent;
+  border: none;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.botao-sobre {
+    margin-left: 1300px;
+}
+
+
+.sidebar {
+  width: 25vh;
+  background-color: #e0e0e0;
+  display: flex;
+  flex-direction: row;
+  align-items: first baseline;
+  padding-top: 10px;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-section img {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-section {
+  margin-top: 100px;
+  padding-left: 105px;
+  
+}
+
+
+.main-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.chat-header {
+  background-color: #b6d9ec;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  
+}
+
+
+
+.chat-body {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-card {
+  background-color: #a9e8dc;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  width: 70%;
+  max-width: 1300px;
+}
+
+.chat-card h2 {
+  margin-bottom: 20px;
+  color: #181d54;
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 30px;
+  padding: 5px 15px;
+  box-shadow: 0 0 8px rgba(115, 110, 110, 0.1);
+}
+input, textarea {
+    background-color: #fff;
+    color: #2c3e50;
+}
+
+.chat-input-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.send-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #181d54;
+  font-size: 18px;
+}
