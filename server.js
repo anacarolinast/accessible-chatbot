@@ -23,6 +23,7 @@ function readUsers() {
 
 function saveUser(user) {
   const users = readUsers();
+  user.historico = [];
   users.push(user);
   fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
 }
