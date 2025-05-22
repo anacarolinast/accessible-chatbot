@@ -57,6 +57,27 @@ app.get('/Historico/:email', (req, res) => {
   res.json(user.historico || []);
 });
 
+app.post('/Historico/:email', (req, res) => {
+  const { mensagens } = req.body; // [{ remetente, conteudo, timestamp }]
+  const users = readUsers();
+  const index = users.findIndex(u => u.email === req.params.email);
+
+  if (index === -1) {
+    return res.status(404).json({ mensagem: 'Usuário não encontrado.' });
+  }
+
+  const novaConversa = {
+    id: Date.now().toString(),
+    mensagens,
+  };
+
+  users[index].historico = users[index].historico || [];
+  users[index].historico.push(novaConversa);
+
+  fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
+  res.status(201).json({ mensagem: 'O seu histórico de conversas foi salvo :).' });
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
