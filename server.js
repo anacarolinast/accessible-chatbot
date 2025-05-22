@@ -46,6 +46,17 @@ app.post('/Cadastro', (req, res) => {
   res.status(201).json({ mensagem: 'Usuário cadastrado com sucesso.' });
 });
 
+app.get('/Historico/:email', (req, res) => {
+  const users = readUsers();
+  const user = users.find(u => u.email === req.params.email);
+
+  if (!user) {
+    return res.status(404).json({ mensagem: 'Usuário não encontrado.' });
+  }
+
+  res.json(user.historico || []);
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
