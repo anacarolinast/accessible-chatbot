@@ -23,6 +23,15 @@ function App() {
         <Route path="/404" element={<NotFound />} />
 
         <Route
+  path="/historico"
+  element={
+    <PrivateRoute>
+      <HistoricoPage />
+    </PrivateRoute>
+  }
+/>
+
+        <Route
           path="/home"
           element={
             <PrivateRoute>
