@@ -3,6 +3,7 @@ import Login from './pages/login/Login';
 import Cadastro from './pages/register/Cadastro';
 import Home from './pages/home/Home';
 import PrivateRoute from './components/PrivateRoute';
+import HistoricoPage from './pages/HistoricoPage';
 
 function NotFound() {
   return (
